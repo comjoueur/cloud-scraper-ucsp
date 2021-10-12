@@ -6,6 +6,8 @@
 #
 appdirs==1.4.4
     # via black
+asgiref==3.4.1
+    # via django
 attrs==21.2.0
     # via
     #   automat
@@ -45,6 +47,8 @@ cssselect==1.1.0
     #   parsel
     #   scrapy
 dataclasses==0.6
+    # via -r requirements.in
+django==3.2.8
     # via -r requirements.in
 docker==5.0.2
     # via shub
@@ -105,6 +109,8 @@ pyopenssl==20.0.1
     # via scrapy
 python-dateutil==2.8.2
     # via botocore
+pytz==2021.3
+    # via django
 pyyaml==5.1.2
     # via
     #   -r requirements.in
@@ -147,6 +153,8 @@ six==1.16.0
     #   shub
     #   w3lib
     #   websocket-client
+sqlparse==0.4.2
+    # via django
 toml==0.10.2
     # via
     #   black

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div id="content">
+    <form action="/" method="get">
+        {% for field in form  %}
+            <div class="col-sm-6">
+              <b>{{ field.label_tag }}</b> {{ field }}
+            </div>
+            <br/>
+            <input type="submit" value="Submit">
+            <br/>
+        {% endfor %}
+        <br/>
+        {% for post in posts  %}
+            <div class="col-sm-6">
+                <a href={{post.url}}>
+                    <b>ID: {{ post.id }}</b><br/><b>Counter: {{ post.count }}</b><br/>Document URL: {{post.url}}<br/>Rank: {{post.rank}}
+                </a>
+            </div>
+            <br/>
+            <br/>
+        {% endfor %}
+    </form>
+</div>
+
+{% endblock %}

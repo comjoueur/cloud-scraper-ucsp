@@ -42,8 +42,9 @@ class SumaqPipeline:
 
     def close_spider(self, _):
         content = ""
+        percent = round(1 / len(self.mentions.keys()), 4)
         for parent, sons in self.mentions.items():
-            content += "{} {}\n".format(parent, ",".join(sons))
+            content += "{} {} {}\n".format(parent, ",".join(sons), percent)
         self.s3.Object(self.settings["AWS_S3_BUCKET"], "page_rank/input").put(
             Body=content
         )

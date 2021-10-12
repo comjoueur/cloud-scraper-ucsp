@@ -1,6 +1,7 @@
 black==20.8b0
 click==7.0.0
 dataclasses==0.6
+django
 scrapy
 shub
 urllib3<1.26,>=1.20
